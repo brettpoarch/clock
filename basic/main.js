@@ -19,13 +19,19 @@ $(document).ready(function(){
 		return num
 	}
 
+	function amPm(hours){
+		if(hours >= 12 && hours <= 23){
+			return "PM"
+		} 
+		return "AM"
+	}
 
 	var clock = setInterval(function (){
 		var d = new Date()
 		var hours = d.getHours()
 		var minutes = d.getMinutes()
 		var seconds = d.getSeconds()
-		var time = nonMil(twoDigit(hours)) + ":" + twoDigit(minutes) + ":" + twoDigit(seconds) + "PM"
+		var time = nonMil(twoDigit(hours)) + ":" + twoDigit(minutes) + ":" + twoDigit(seconds) + " " + amPm(hours)
 		$(".app").html(`${time}`)
 	}, 1000)
 
