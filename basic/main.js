@@ -26,6 +26,7 @@ $(document).ready(function(){
 		return "AM"
 	}
 
+ amPm(24)
 	var clock = setInterval(function (){
 		var d = new Date()
 		var hours = d.getHours()

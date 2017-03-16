@@ -1,0 +1,11 @@
+body{
+	background-color: white;
+}
+.app {
+	height:auto;
+	text-align: center;
+	line-height: center;
+	color:white;
+	font-size: 50px;
+	margin-top: 15%;
+}
